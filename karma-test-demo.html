@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="css/jquery.thumb.css">
   <title>Document</title>
 </head>
 <body>
-  <h1>karma-test-demo</h1>
+  <h1 id="de">karma-test-demo</h1>
+  <div id="thumb"></div>
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="dist/jquery.thumb.js"></script> <!-- 获取babel转码后的jQuery插件 -->
+  <script>
+    $(document).ready(function() {
+      $('#thumb').thumb();
+    });
+  </script>
 </body>
 </html>
