@@ -33,6 +33,7 @@
     "karma-jasmine-diff-reporter": "^1.0.0"
   },
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "systemjs": "^0.20.12"
   }
 }

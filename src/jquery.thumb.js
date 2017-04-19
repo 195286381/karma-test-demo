@@ -13,7 +13,7 @@
     `);
     $mountObj.append($thumbEle);
 
-    $('.thumb-image').on('click', function() {
+    $('.thumb-image').on('click', function(event) {
       $mountObj.find('.thumb-value').html(++initValue);
     });
   };

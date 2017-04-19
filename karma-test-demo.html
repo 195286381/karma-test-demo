@@ -9,12 +9,36 @@
 <body>
   <h1 id="de">karma-test-demo</h1>
   <div id="thumb"></div>
-  <script src="node_modules/jquery/dist/jquery.js"></script>
-  <script src="dist/jquery.thumb.js"></script> <!-- 获取babel转码后的jQuery插件 -->
+  <script src="node_modules/systemjs/dist/system.js"></script>
+  <script src="system.config.js"></script>
+  <!-- <script src="node_modules/jquery/dist/jquery.js"></script> -->
+  <!-- <script src="dist/jquery.thumb.js"></script> <!-- 获取babel转码后的jQuery插件 -->
   <script>
-    $(document).ready(function() {
-      $('#thumb').thumb();
+    // System.config({
+
+    //    // set all requires to "lib" for library code
+    //    baseURL: './',
+
+    //    // set "app" as an exception for our application code
+    //    paths: {
+    //      'jquery': '/node_modules/jquery/dist/jquery.js',
+    //      'jquery.thumb.js': '/dist/jquery.thumb.js'
+
+    //    }
+    //  });
+    System.import('node_modules/jquery/dist/jquery.js').then(function() {
+      System.import('dist/jquery.thumb.js').then(
+        function() {
+          console.log('hello');
+          $(document).ready(function() {
+            $('#thumb').thumb();
+          });
+        }
+      );
     });
+
+
+
   </script>
 </body>
 </html>
