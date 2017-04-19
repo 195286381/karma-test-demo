@@ -2,7 +2,7 @@
 
 Just a personal and practical demo/.
 
-`ES6` + `Babel` + `Karma` + `Jasmine`
+`ES6` + `Babel` + `Karma` + `Jasmine` + `SystemJS`
 
   ✨✨✨✨
 
